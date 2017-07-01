@@ -12,6 +12,7 @@ Plugin 'liuchengxu/space-vim-dark'
 Plugin 'dfxyz/CandyPaper.vim'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'vim-scripts/burnttoast256'
+Plugin 'mileszs/ack.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -39,6 +40,14 @@ set showcmd             " show command in bottom bar
 set showmatch           " highlight matching [{()}] 
 " }}}
 
+" leader shortcuts {{{
+let mapleader=","       " leader is comma
+" jk is escape
+inoremap jk <esc>
+" open ack.vim
+nnoremap <leader>a :Ack! 
+" }}}
+
 " searching {{{
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
@@ -50,8 +59,6 @@ nnoremap <silent> <leader><space> :noh<CR>
 " folding {{{
 set foldenable          " enable folding
 set foldlevelstart=100  " open most folds by default
-" space open/closes folds
-nnoremap <space> za
 set foldmethod=indent   " fold based on indent level
 " }}}
 
@@ -67,12 +74,6 @@ nnoremap E $
 " $/^ doesn't do anything
 nnoremap $ <nop>
 nnoremap ^ <nop>
-" }}}
-
-" leader shortcuts {{{
-let mapleader=","       " leader is comma
-" jk is escape
-inoremap jk <esc>
 " }}}
 
 set modelines=1
