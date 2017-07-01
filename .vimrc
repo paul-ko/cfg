@@ -59,6 +59,8 @@ nnoremap <silent> <leader><space> :noh<CR>
 " folding {{{
 set foldenable          " enable folding
 set foldlevelstart=100  " open most folds by default
+" space open/closes folds
+nnoremap <space> za
 set foldmethod=indent   " fold based on indent level
 " }}}
 
