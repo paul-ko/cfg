@@ -14,6 +14,10 @@ Plugin 'vim-scripts/indentpython.vim'
 Bundle 'Valloric/YouCompleteMe'
 " Python syntax check on save
 Plugin 'scrooloose/syntastic'
+" Status bar
+Plugin 'vim-airline/vim-airline'
+" Show git status in the gutter
+Plugin 'airblade/vim-gitgutter'
 " PEP8 checking
 Plugin 'nvie/vim-flake8'
 " File browser
@@ -25,7 +29,8 @@ Plugin 'scrooloose/nerdtree'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-" curated from https://dougblack.io/words/a-good-vimrc.html
+" largely curated from 
+" https://dougblack.io/words/a-good-vimrc.html
 
 " colors
 syntax enable           " enable syntax processing
@@ -88,9 +93,20 @@ nnoremap <C-H> <C-W><C-H>
 " done with it, and the latter defines a shortcut for goto definition.
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+" YCM should use python3 autocomplete
+let g:ycm_python_binary_path = '/usr/bin/python3'
 
 " file browse ignore .pyc
 let NERDTreeIgnore=['\.pyc$', '\~$'] 
 
 " NERDTree - toggle key
 map <leader>. :NERDTreeToggle<CR>
+
+" Recommended syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_wq = 0
