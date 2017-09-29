@@ -1,16 +1,26 @@
 " vundle
 set nocompatible              " be iMproved, required
-filetype off                  " required
+filetype on                   " required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-" Plugin 'liuchengxu/space-vim-dark'
-" Plugin 'dfxyz/CandyPaper.vim'
-" Plugin 'nanotech/jellybeans.vim'
-Plugin 'vim-scripts/burnttoast256'
+Plugin 'dracula/vim'
 Plugin 'mileszs/ack.vim'
+" Python auto-indentation
+Plugin 'vim-scripts/indentpython.vim'
+" Autocomplete
+Bundle 'Valloric/YouCompleteMe'
+" Python syntax check on save
+Plugin 'scrooloose/syntastic'
+" PEP8 checking
+Plugin 'nvie/vim-flake8'
+" File browser
+Plugin 'scrooloose/nerdtree'
+" Detailed status bar
+" Disabled due to large number of dependencies
+" Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -19,7 +29,7 @@ filetype plugin indent on    " required
 
 " colors
 syntax enable           " enable syntax processing
-colorscheme burnttoast256
+colorscheme dracula
 
 " tabs and spaces
 set tabstop=4           " number of visual spaces per TAB
@@ -66,3 +76,21 @@ nnoremap E $
 " $/^ doesn't do anything
 nnoremap $ <nop>
 nnoremap ^ <nop>
+
+" split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" YCM
+" The former line ensures that the autocomplete window goes away when you’re
+" done with it, and the latter defines a shortcut for goto definition.
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+" file browse ignore .pyc
+let NERDTreeIgnore=['\.pyc$', '\~$'] 
+
+" NERDTree - toggle key
+map <leader>. :NERDTreeToggle<CR>
