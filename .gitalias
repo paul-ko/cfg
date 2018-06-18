@@ -1,0 +1,6 @@
+; git config --global include.path <path-to-this-file>
+[alias]
+    last = 'log -1 HEAD'
+    unstage = 'reset HEAD --'
+    # Next one is more of a reminder of how to shell out in an alias...
+    author-count = "!git log --pretty=format:%an | sort | uniq -c | sort -n"
