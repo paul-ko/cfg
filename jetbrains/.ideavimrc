@@ -1,0 +1,30 @@
+" largely curated from 
+" https://dougblack.io/words/a-good-vimrc.html
+
+" ui config
+set number              " show line numbers
+
+" leader shortcuts
+let mapleader=","
+" jk is escape
+inoremap jk <esc>
+
+" searching
+set incsearch           " search as characters are entered
+set hlsearch            " highlight matches
+" use smartcase search
+set ignorecase
+set smartcase
+" turn off search highlight
+nnoremap <silent> <leader><space> :noh<CR>
+
+" movement
+" move vertically by visual line
+nnoremap j gj
+nnoremap k gk
+
+" split navigation
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l
+nnoremap <C-H> <C-W>h
