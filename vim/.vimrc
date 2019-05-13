@@ -61,7 +61,6 @@ set hlsearch            " highlight matches
 set ignorecase
 set smartcase
 " turn off search highlight
-" nnoremap <leader><space> :nohlsearch<CR>
 nnoremap <silent> <leader><space> :noh<CR>
 
 " folding
@@ -75,32 +74,12 @@ set foldmethod=indent   " fold based on indent level
 " move vertically by visual line
 nnoremap j gj
 nnoremap k gk
-" move to beginning/end of line
-nnoremap B ^
-nnoremap E $
-" $/^ doesn't do anything
-nnoremap $ <nop>
-nnoremap ^ <nop>
 
 " split navigation
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-
-" YCM
-" The former line ensures that the autocomplete window goes away when you’re
-" done with it, and the latter defines a shortcut for goto definition.
-let g:ycm_autoclose_preview_window_after_completion=1
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
-" YCM should use python3 autocomplete
-let g:ycm_python_binary_path = '/usr/bin/python3'
-
-" file browse ignore .pyc
-let NERDTreeIgnore=['\.pyc$', '\~$'] 
-
-" NERDTree - toggle key
-map <leader>. :NERDTreeToggle<CR>
 
 " Recommended syntastic settings
 set statusline+=%#warningmsg#
