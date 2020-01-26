@@ -11,7 +11,8 @@ Plugin 'mileszs/ack.vim'
 " Python auto-indentation
 Plugin 'vim-scripts/indentpython.vim'
 " Autocomplete
-Bundle 'Valloric/YouCompleteMe'
+" Disabled due to crashiness.
+" Bundle 'Valloric/YouCompleteMe'
 " Python syntax check on save
 Plugin 'scrooloose/syntastic'
 " Status bar
