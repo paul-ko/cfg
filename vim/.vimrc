@@ -82,6 +82,15 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" Change line selection when in insert mode.
+:autocmd InsertEnter * set cul
+:autocmd InsertLeave * set nocul
+
+" Reduce key code delay.
+" See https://vi.stackexchange.com/questions/16148/slow-vim-escape-from-insert-mode/20220#20220
+set timeoutlen=1000
+set ttimeoutlen=5
+
 " Recommended syntastic settings
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
