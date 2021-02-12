@@ -1,0 +1,79 @@
+{
+    "[plaintext]": {
+        "editor.quickSuggestions": {
+            "other": false,
+            "comments": false,
+            "strings": false
+        }
+    },
+    "window.zoomLevel": 1,
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "workbench.colorTheme": "Dracula",
+    "vim.leader": ",",
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "k"],
+            "after": ["<Esc>",]
+        }
+    ],
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["Z", "Z"],
+            "commands": [ ":wq" ]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>", " "],
+            "commands": [ ":noh" ]
+        }, {
+            "before": ["j"],
+            "after": ["g", "j"]
+        }, {
+            "before": ["k"],
+            "after": ["g", "k"]
+        }, {
+            "before": ["<c-h>"],
+            "after": ["<c-w>", "h"]
+        }, {
+            "before": ["<c-j>"],
+            "after": ["<c-w>", "j"]
+        }, {
+            "before": ["<c-k>"],
+            "after": ["<c-w>", "k"]
+        }, {
+            "before": ["<c-l>"],
+            "after": ["<c-w>", "l"]
+        }, {
+            "before": ["<leader>", "O"],
+            "after": ["O", "<Esc>", "j"]
+        }, {
+            "before": ["<leader>", "o"],
+            "after": ["o", "<Esc>", "k"]
+        }, {
+            "before": ["<leader>", "s"],
+            "after": ["s", "<Enter>", "<Esc>"]
+        }, {
+            "before": ["<c-b>"],
+            "commands": ["workbench.action.toggleSidebarVisibility"]
+        }
+    ],
+    "vim.hlsearch": true,
+    "vim.ignorecase": true,
+    "vim.smartcase": true,
+    "[powershell]": {
+        "editor.rulers": [80]
+    },
+    "python.linting.pylintEnabled": true,
+    "python.linting.pycodestyleEnabled": true,
+    "python.linting.flake8Enabled": true,
+    "[python]": {
+        "editor.rulers": [80]
+    },
+    "editor.minimap.enabled": false,
+    "markdown.preview.doubleClickToSwitchToEditor": false,
+    "workbench.editor.enablePreview": false,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "editor.parameterHints.enabled": false
+}
