@@ -1,21 +1,60 @@
 {
+    "debug.inlineValues": true,
+    "editor.minimap.enabled": false,
+    "editor.parameterHints.enabled": false,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "scm.countBadge": "off",
+    "telemetry.enableTelemetry": false,
+    "terminal.integrated.allowChords": false,
+    "terminal.integrated.sendKeybindingsToShell": true,
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "window.titleSeparator": " 🤔 ",
+    "window.zoomLevel": 2,
+    "workbench.colorTheme": "Dracula",
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.wrapTabs": true,
+    "workbench.sash.size": 10,
+    "workbench.tree.indent": 18,
+    "workbench.tree.renderIndentGuides": "always",
+    "[javascript]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": true
+        },
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2
+    },
     "[plaintext]": {
         "editor.quickSuggestions": {
-            "other": false,
             "comments": false,
+            "other": false,
             "strings": false
         }
     },
-    "window.zoomLevel": 1,
-    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
-    "workbench.colorTheme": "Dracula",
-    "vim.leader": ",",
+    "markdown.preview.doubleClickToSwitchToEditor": false,
+    "[powershell]": {
+        "editor.rulers": [80]
+    },
+    "[python]": {
+        "editor.rulers": [80]
+    },
+    "python.linting.pylintEnabled": true,
+    "python.linting.pycodestyleEnabled": true,
+    "python.linting.flake8Enabled": true,
+    "vim.handleKeys": {
+        "<C-d>": true
+    },
+    "vim.hlsearch": true,
+    "vim.ignorecase": true,
     "vim.insertModeKeyBindings": [
         {
             "before": ["j", "k"],
             "after": ["<Esc>",]
         }
     ],
+    "vim.leader": ",",
     "vim.normalModeKeyBindings": [
         {
             "before": ["Z", "Z"],
@@ -53,27 +92,8 @@
         }, {
             "before": ["<leader>", "s"],
             "after": ["s", "<Enter>", "<Esc>"]
-        }, {
-            "before": ["<c-b>"],
-            "commands": ["workbench.action.toggleSidebarVisibility"]
         }
     ],
-    "vim.hlsearch": true,
-    "vim.ignorecase": true,
+    "vim.showMarksInGutter": true,
     "vim.smartcase": true,
-    "[powershell]": {
-        "editor.rulers": [80]
-    },
-    "python.linting.pylintEnabled": true,
-    "python.linting.pycodestyleEnabled": true,
-    "python.linting.flake8Enabled": true,
-    "[python]": {
-        "editor.rulers": [80]
-    },
-    "editor.minimap.enabled": false,
-    "markdown.preview.doubleClickToSwitchToEditor": false,
-    "workbench.editor.enablePreview": false,
-    "files.trimFinalNewlines": true,
-    "files.trimTrailingWhitespace": true,
-    "editor.parameterHints.enabled": false
 }
