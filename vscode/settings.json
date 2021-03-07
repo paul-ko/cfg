@@ -7,6 +7,7 @@
     "scm.countBadge": "off",
     "telemetry.enableTelemetry": false,
     "terminal.integrated.allowChords": false,
+    "terminal.integrated.experimentalUseTitleEvent": true,
     "terminal.integrated.sendKeybindingsToShell": true,
     "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
     "window.titleSeparator": " 🤔 ",
