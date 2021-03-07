@@ -34,7 +34,6 @@
             "strings": false
         }
     },
-    "markdown.preview.doubleClickToSwitchToEditor": false,
     "[powershell]": {
         "editor.rulers": [80]
     },
