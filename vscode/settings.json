@@ -7,8 +7,11 @@
     "scm.countBadge": "off",
     "telemetry.enableTelemetry": false,
     "terminal.integrated.allowChords": false,
+    "terminal.integrated.commandsToSkipShell": [
+        "workbench.action.focusActiveEditorGroup",
+        "workbench.action.toggleSidebarVisibility"
+    ],
     "terminal.integrated.experimentalUseTitleEvent": true,
-    "terminal.integrated.sendKeybindingsToShell": true,
     "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
     "window.titleSeparator": " 😤 ",
     "window.zoomLevel": 2,
