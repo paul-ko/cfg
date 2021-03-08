@@ -73,6 +73,12 @@ if on_msys; then
     fi
 fi
 
+if on_msys; then
+    if can_find sqlite3; then
+        alias sqlite3='winpty sqlite3'
+    fi
+fi
+
 if can_find npx; then
     alias npx='npx --no-install';
 fi
