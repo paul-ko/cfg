@@ -16,6 +16,18 @@ git_dir=~/git
 #############
 
 function r() {
+    if [[ $# -ne 1 ]]; then
+        printf "Must supply exactly one argument!";
+        return;
+    fi
+
+    # Check for exact match.
+    if [ -d "$git_dir/$1" ]; then
+        pushd "$git_dir/$1" >/dev/null
+        return
+    fi
+
+    # Check for starts with.
     found="";
     while read -rd ""; do
         if [[ $found == "" ]]; then
@@ -29,7 +41,8 @@ function r() {
     elif [[ $found != "" ]]; then
         pushd "$found" >/dev/null
     else
-        found="";
+
+        # If there were no startswith, checks for contains.
         while read -rd ""; do
             if [[ $found == "" ]]; then
                 found="$REPLY";
