@@ -16,35 +16,35 @@ git_dir=~/git
 #############
 
 function r() {
-   found="";
-   while read -rd ""; do
-       if [[ $found == "" ]]; then
-           found="$REPLY";
-       else
-           found='\0';
-       fi;
-   done < <(find "$git_dir" -maxdepth 1 -type d -name "$1*" -print0);
-   if [[ $found == '\0' ]]; then
-       echo "Found multiple starts!"
-   elif [[ $found != "" ]]; then
-       pushd "$found" >/dev/null
-   else
-       found="";
-       while read -rd ""; do
-           if [[ $found == "" ]]; then
-               found="$REPLY";
-           else
-               found='\0';
-           fi;
-       done < <(find "$git_dir" -maxdepth 1 -type d -name "*$1*" -print0);
-       if [[ "$found" == "" ]]; then
-           echo "Found no starts or contains!";
-       elif [[ "$found" == '\0' ]]; then
-           echo "Found multiple contains!";
+    found="";
+    while read -rd ""; do
+        if [[ $found == "" ]]; then
+            found="$REPLY";
         else
-           pushd "$found" >/dev/null
-       fi
-   fi
+            found='\0';
+        fi;
+    done < <(find "$git_dir" -maxdepth 1 -type d -name "$1*" -print0);
+    if [[ $found == '\0' ]]; then
+        echo "Found multiple starts!"
+    elif [[ $found != "" ]]; then
+        pushd "$found" >/dev/null
+    else
+        found="";
+        while read -rd ""; do
+            if [[ $found == "" ]]; then
+                found="$REPLY";
+            else
+                found='\0';
+            fi;
+        done < <(find "$git_dir" -maxdepth 1 -type d -name "*$1*" -print0);
+        if [[ "$found" == "" ]]; then
+            echo "Found no starts or contains!";
+        elif [[ "$found" == '\0' ]]; then
+            echo "Found multiple contains!";
+         else
+            pushd "$found" >/dev/null
+        fi
+    fi
 }
 
 function is_available() {
