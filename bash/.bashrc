@@ -60,26 +60,19 @@ function r() {
     fi
 }
 
-function is_available() {
-    # exit code = 1 if $1 is not available
-    # exit code = 0 otherwise
-    if [[ $# -ne 1 ]]; then
-        printf "Must supply exactly one argument!";
-        return;
-    fi
-    type "$1" >/dev/null 2>&1
-}
-
 ###########
 # aliases #
 ###########
 
+alias can_find=">/dev/null 2>&1 type"
 alias on_msys='test $(uname -o) == "Msys"';
+
 if on_msys; then
-    if is_available python; then
+    if can_find python; then
         alias python='winpty python.exe';
     fi
 fi
-if is_available npx; then
+
+if can_find npx; then
     alias npx='npx --no-install';
 fi
