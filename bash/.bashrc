@@ -80,5 +80,7 @@ if on_msys; then
 fi
 
 if can_find npx; then
-    alias npx='npx --no-install';
+    if npx --version | grep -Pq '^[0-6]\.'; then
+        alias npx='npx --no-install';
+    fi
 fi
