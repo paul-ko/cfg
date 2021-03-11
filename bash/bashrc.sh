@@ -3,7 +3,9 @@
 ###########################
 
 export EDITOR=code
-export PYTHONPATH="$PYTHONPATH:."
+if [[ -z "$PYTHONPATH" ]]; then
+    export PYTHONPATH="."
+fi
 
 ###################
 # local variables #
