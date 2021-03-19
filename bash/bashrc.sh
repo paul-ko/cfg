@@ -80,9 +80,3 @@ if on_msys; then
         alias sqlite3='winpty sqlite3'
     fi
 fi
-
-if can_find npx; then
-    if npx --version | grep -Pq '^[0-6]\.'; then
-        alias npx='npx --no-install';
-    fi
-fi
