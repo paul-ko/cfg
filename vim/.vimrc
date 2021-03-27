@@ -1,3 +1,4 @@
+" in .vimrc, source this with `source [filepath]`
 " vundle
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -36,6 +37,7 @@ filetype plugin indent on    " required
 " colors
 syntax enable           " enable syntax processing
 colorscheme dracula
+hi Normal guibg=NONE ctermbg=NONE
 
 " tabs and spaces
 set tabstop=4           " number of visual spaces per TAB
