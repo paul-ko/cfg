@@ -1,3 +1,4 @@
+# shellcheck shell=bash
 # Source in ~/.bashprofile
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"

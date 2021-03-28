@@ -1,4 +1,6 @@
-if test $(uname -o) == "Msys"; then
+#!/usr/bin/env bash
+
+if test "$(uname -o)" == "Msys"; then
     vscode_dir=~/AppData/Roaming/Code/User/
 else
     vscode_dir=~/.config/Code/User/

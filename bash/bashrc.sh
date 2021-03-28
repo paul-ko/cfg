@@ -1,3 +1,5 @@
+# shellcheck shell=bash
+
 ###########################
 # exported core variables #
 ###########################
@@ -17,7 +19,7 @@ git_dir=~/git
 # functions #
 #############
 
-function r() {
+r() {
     if [[ $# -ne 1 ]]; then
         printf "Must supply exactly one argument!";
         return;
@@ -25,7 +27,7 @@ function r() {
 
     # Check for exact match.
     if [ -d "$git_dir/$1" ]; then
-        pushd "$git_dir/$1" >/dev/null
+        pushd "$git_dir/$1" >/dev/null || return
         return
     fi
 
@@ -41,7 +43,7 @@ function r() {
     if [[ $found == '\0' ]]; then
         echo "Found multiple starts!"
     elif [[ $found != "" ]]; then
-        pushd "$found" >/dev/null
+        pushd "$found" >/dev/null || return
     else
 
         # If there were no startswith, checks for contains.
@@ -57,7 +59,7 @@ function r() {
         elif [[ "$found" == '\0' ]]; then
             echo "Found multiple contains!";
          else
-            pushd "$found" >/dev/null
+            pushd "$found" >/dev/null || return
         fi
     fi
 }
