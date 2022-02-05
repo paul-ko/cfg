@@ -118,13 +118,5 @@ fi
 
 . ~/git/cfg/bash/bashrc.sh
 . ~/git/cfg/bash/bashrc-ubuntu.sh
-export ITUNES_XML="/mnt/e/iTunes Library.xml"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-music() {
-    db=/mnt/c/Users/Spence/git/itunes-to-sqlite/tunes.db
-    sqlite3 $db
-}
+. ~/git/cfg/bash/wsl/music-project.sh
+. ~/git/cfg/bash/wsl/js-dev.sh
