@@ -104,3 +104,6 @@ let g:syntastic_check_on_wq = 0
 
 " Mute bell; needed in WSL.
 set visualbell
+
+" Ruler, based on black line width
+set colorcolumn=89
