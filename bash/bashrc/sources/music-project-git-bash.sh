@@ -1,0 +1,17 @@
+#!/user/bin/env bash
+
+ITUNES_XML=/e/iTunes\ Library.xml
+
+test_tunes() {
+    r itunes-to-s
+    name=tunes.db
+    if [ -f ./$name ]; then
+        rm $name
+    fi
+    if [[ ! -z "$1" ]]; then
+        time pipenv run load --from "$ITUNES_XML" --to $name --verbose
+    else
+        time pipenv run load --from "$ITUNES_XML" --to $name
+    fi
+}
+
