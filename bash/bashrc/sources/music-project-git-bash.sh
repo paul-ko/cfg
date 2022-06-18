@@ -2,7 +2,7 @@
 
 ITUNES_XML=/e/iTunes\ Library.xml
 
-test_tunes() {
+load_music_db() {
     r itunes-to-s
     name=tunes.db
     if [ -f ./$name ]; then
@@ -14,4 +14,7 @@ test_tunes() {
         time pipenv run load --from "$ITUNES_XML" --to $name
     fi
 }
+
+alias load=load_music_db
+alias test_tunes=load_music_db
 

@@ -5,3 +5,4 @@ sources=~/git/cfg/bash/bashrc/sources
 . ${sources}/git-bash-shell.sh
 . ${sources}/music-project-git-bash.sh
 . ${sources}/vbox-host.sh
+. ${sources}/brogue-git-bash.sh
